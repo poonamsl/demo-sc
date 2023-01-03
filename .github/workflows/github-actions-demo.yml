@@ -13,3 +13,8 @@ jobs:
                   accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
                   tunnelName: github-action-tunnel
                   configFile: ${{ github.workspace }}/sc-configuration/config.yaml
+            - uses: actions/upload-artifact@v3
+              if: ${{ failure() }}
+              with:
+                name: sauce-connect-log
+                path: ${{ env.SAUCE_CONNECT_DIR_IN_HOST }}/sauce-connect.log
