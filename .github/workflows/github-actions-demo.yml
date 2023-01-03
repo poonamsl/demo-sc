@@ -7,7 +7,7 @@ jobs:
         name: Action Test
         steps:
             # ...
-            - uses: saucelabs/sauce-connect-action@v3
+            - uses: saucelabs/sauce-connect-action@v2
               with:
                   username: parora
                   accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
