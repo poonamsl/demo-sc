@@ -17,4 +17,4 @@ jobs:
               if: ${{ failure() }}
               with:
                 name: sauce-connect-log
-                path: ${{ env.SAUCE_CONNECT_DIR_IN_HOST }}/sauce-connect.log
+                path: ${{ github.workspace }}/sc.log
