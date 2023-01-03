@@ -9,7 +9,7 @@ jobs:
             # ...
             - uses: saucelabs/sauce-connect-action@v2
               with:
-                  username: ${{ secrets.SAUCE_USERNAME }}
+                  username: parora
                   accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
                   tunnelName: github-action-tunnel
                   configFile: ${{ github.workspace }}/sc-configuration/config.yaml
